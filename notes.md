@@ -45,3 +45,50 @@ When used in a condition, empty strings and the number 0 are evaluated as **fals
 
 - `reset()` is a method designed for `<form>` elements and wont work on anything else.
 - https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/reset
+
+# Moodule 4.3 Notes
+
+### Purpose
+
+- Use DOM API methods to select and dynamically generate HTML elements and content.
+- Traverse the DOM and manipulate elements.
+
+## 4.3.5 Apply Unique IDs to Tasks
+
+`data-*` is known as Custom Data Attributes. Allow developers to store extra information about an HTML element without conflicting with any of the built-in attributes.
+
+- store custom data, private to the page or app
+
+## 4.3.6 Apply Unique IDs to Tasks
+
+no notes
+
+## 4.3.7 Add Ability to Delete a Task
+
+**event delegation** set up the click event listener on a parent element and then, through that single event listener, determine which child elements were clicked.
+
+**event bubbling**
+when an event is triggered by an element, it will first run its handler. Then run its parent's handler, then up the chain
+
+**event.target**
+reports the element on which the event occurs
+
+# 4.4 Notes
+
+## 4.4.4 Save Tasks to an Array
+
+We can't use a `querySelector()` method to save the entire task item element to localStorage because localStorage can only save data as a string, and it is difficult to convert DOM elements to strings.
+
+`array[]` can be used to keep a list of objects in one variable.
+
+Now when we create a new task, the object holding all of its data can be added to the array. We just need to update the object that holds the task's data to also include its id and status, both of which are only written to the associated DOM element.
+
+The array method called `push()`adds any content between the parentheses to the end of the specified array.
+
+## 4.4.5 Save Tasks to localStorage
+
+`localStorage` can only store one type of data: strings. use `JSON.stringify(tasks)` to convert data into strings.
+
+`JSON.parse()` will convert a string into an array
+
+**JSON** stands for JavaScript Object Notation, which is a means of organizing and structuring data that's transferred from one place to another.
